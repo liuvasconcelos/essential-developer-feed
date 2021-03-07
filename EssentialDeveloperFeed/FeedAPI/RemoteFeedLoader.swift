@@ -26,6 +26,7 @@ final class RemoteFeedLoader {
         self.url = url
         self.client = client
     }
+    
     func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { result in
             switch result {
