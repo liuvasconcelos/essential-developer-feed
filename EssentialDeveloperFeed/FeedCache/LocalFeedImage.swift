@@ -1,5 +1,5 @@
 //
-//  LocalFeedItem.swift
+//  LocalFeedImage.swift
 //  EssentialDeveloperFeed
 //
 //  Created by Livia Vasconcelos on 31/05/21.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct LocalFeedItem: Equatable {
+struct LocalFeedImage: Equatable {
     let id: UUID
     let description: String?
     let location: String?
-    let imageURL: URL
+    let url: URL
 }

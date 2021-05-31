@@ -124,16 +124,16 @@ class LoadFeedFromRemoteUseCasesTests: XCTestCase {
     private func makeItem(id: UUID = UUID(),
                           description: String? = nil,
                           location: String? = nil,
-                          imageURL: String) -> (model: FeedItem, json: [String: Any]) {
-        let item = FeedItem(id: id,
-                            description: description,
-                            location: location,
-                            imageURL: URL(string: imageURL)!)
+                          imageURL: String) -> (model: FeedImage, json: [String: Any]) {
+        let item = FeedImage(id: id,
+                             description: description,
+                             location: location,
+                             url: URL(string: imageURL)!)
         let itemJSON = [
             "id": item.id.uuidString,
             "description": item.description,
             "location": item.location,
-            "image": item.imageURL.absoluteString
+            "image": item.url.absoluteString
         ].reduce(into: [String:Any]()) { (acc, e) in
             if let value = e.value { acc[e.key] = value }
         }
