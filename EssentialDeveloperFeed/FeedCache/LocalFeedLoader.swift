@@ -8,13 +8,15 @@
 import Foundation
 
 private final class FeedCachePolicy {
-    private let calendar = Calendar(identifier: .gregorian)
+    private init() {}
+    
+    private static let calendar = Calendar(identifier: .gregorian)
 
-    private var maxCacheAgeInDays: Int {
+    private static var maxCacheAgeInDays: Int {
         return 7
     }
     
-    func validate(_ timestamp: Date, againist date: Date) -> Bool {
+    static func validate(_ timestamp: Date, againist date: Date) -> Bool {
         guard  let maxCacheAge = calendar.date(byAdding: .day, value: maxCacheAgeInDays, to: timestamp) else {
             return false
         }
@@ -25,7 +27,6 @@ private final class FeedCachePolicy {
 class LocalFeedLoader {
     private let store: FeedStore
     private let currentDate: () -> Date
-    private let cachePolicy = FeedCachePolicy()
     
     init(store: FeedStore, currentDate: @escaping () -> Date) {
         self.store = store
@@ -66,7 +67,7 @@ extension LocalFeedLoader: FeedLoader {
             switch result {
             case let .failure(error):
                 completion(.failure(error))
-            case let .found(feed, timestamp) where self.cachePolicy.validate(timestamp,
+            case let .found(feed, timestamp) where FeedCachePolicy.validate(timestamp,
                                                                              againist: self.currentDate()):
                 completion(.success(feed.toModels()))
             case .found, .empty:
@@ -83,7 +84,7 @@ extension LocalFeedLoader {
             switch result {
             case .failure:
                 self.store.deleteCacheFeed { _ in }
-            case let .found(feed: _, timestamp: timestamp) where !self.cachePolicy.validate(timestamp,
+            case let .found(feed: _, timestamp: timestamp) where !FeedCachePolicy.validate(timestamp,
                                                                                             againist: self.currentDate()):
                 self.store.deleteCacheFeed { _ in }
             case .empty, .found: break
