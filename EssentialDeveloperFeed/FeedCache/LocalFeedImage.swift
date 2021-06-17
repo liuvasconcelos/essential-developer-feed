@@ -1,13 +1,13 @@
 //
-//  FeedImage.swift
+//  LocalFeedImage.swift
 //  EssentialDeveloperFeed
 //
-//  Created by Livia Vasconcelos on 13/01/21.
+//  Created by Livia Vasconcelos on 31/05/21.
 //
 
 import Foundation
 
-struct FeedImage: Equatable {
+struct LocalFeedImage: Equatable {
     let id: UUID
     let description: String?
     let location: String?
