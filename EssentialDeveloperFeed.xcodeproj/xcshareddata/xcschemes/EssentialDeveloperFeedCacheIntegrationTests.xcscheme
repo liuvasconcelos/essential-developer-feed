@@ -5,29 +5,12 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "537A28D025AF79AD0059D60B"
-               BuildableName = "EssentialDeveloperFeed.framework"
-               BlueprintName = "EssentialDeveloperFeed"
-               ReferencedContainer = "container:EssentialDeveloperFeed.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      enableThreadSanitizer = "YES"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
@@ -40,28 +23,6 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "53D9C671261A58AF00ACBDCE"
-               BuildableName = "EssentialDeveloperFeedAPIEndToEndTests.xctest"
-               BlueprintName = "EssentialDeveloperFeedAPIEndToEndTests"
-               ReferencedContainer = "container:EssentialDeveloperFeed.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "537A28D925AF79AD0059D60B"
-               BuildableName = "EssentialDeveloperFeedTests.xctest"
-               BlueprintName = "EssentialDeveloperFeedTests"
-               ReferencedContainer = "container:EssentialDeveloperFeed.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO"
             testExecutionOrdering = "random">
@@ -92,15 +53,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "537A28D025AF79AD0059D60B"
-            BuildableName = "EssentialDeveloperFeed.framework"
-            BlueprintName = "EssentialDeveloperFeed"
-            ReferencedContainer = "container:EssentialDeveloperFeed.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
