@@ -73,6 +73,9 @@
                                                             <state key="normal" title="o">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="Tib-HG-Zkt" eventType="touchUpInside" id="Orf-A7-6MD"/>
+                                                            </connections>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pk1-BH-iEM">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -117,6 +120,14 @@
                                         <constraint firstItem="sZV-6h-ccW" firstAttribute="leading" secondItem="nTx-Py-bjy" secondAttribute="leadingMargin" id="ths-Iv-pU1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="EcO-FX-Sua" id="jQB-M3-ISs"/>
+                                    <outlet property="feedImageContainer" destination="goc-ep-apQ" id="57T-k8-ahw"/>
+                                    <outlet property="feedImageRetryButton" destination="bWH-OM-qzQ" id="QMb-fp-ShG"/>
+                                    <outlet property="feedImageView" destination="pk1-BH-iEM" id="ItT-9F-I11"/>
+                                    <outlet property="locationContainer" destination="muT-fY-s85" id="O60-eX-bh2"/>
+                                    <outlet property="locationLabel" destination="59G-Og-jAd" id="MAk-B8-1VE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
