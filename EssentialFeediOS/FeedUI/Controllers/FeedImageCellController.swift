@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EssentialDeveloperFeed
 
 protocol FeedImageCellControllerDelegate {
     func didRequestImage()
