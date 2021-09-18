@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HTTPClient {
+public protocol HTTPClient {
     typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
     
     /// The completion handler can be invoked in any thread.

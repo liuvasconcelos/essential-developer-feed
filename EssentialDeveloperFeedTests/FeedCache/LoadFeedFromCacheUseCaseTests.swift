@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import EssentialDeveloperFeed
+import EssentialDeveloperFeed
 
 class LoadFeedFromCacheUseCaseTests: XCTestCase {
 
